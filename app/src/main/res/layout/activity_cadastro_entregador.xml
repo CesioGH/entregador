@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/nomeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"/>
+
+            <EditText
+                android:id="@+id/dataNascimentoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data de Nascimento (DD/MM/YYYY)"
+                android:inputType="date"/>
+
+            <EditText
+                android:id="@+id/cpfEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CPF (xxx.xxx.xxx-xx)"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/telefoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefone ((xx)xxxxx-xxxx)"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/enderecoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Endereço"/>
+
+            <Button
+                android:id="@+id/selecionarFotoCNHButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecionar Foto da CNH"/>
+
+            <ImageView
+                android:id="@+id/fotoCNHImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <Button
+                android:id="@+id/selecionarFotoPerfilButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecionar Foto de Perfil"/>
+
+            <ImageView
+                android:id="@+id/fotoPerfilImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <Button
+                android:id="@+id/cadastrarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"/>
+        </LinearLayout>
+    </ScrollView>
+
+

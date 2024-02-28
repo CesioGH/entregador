@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "926661722296",
+    "project_id": "farmacia-mock",
+    "storage_bucket": "farmacia-mock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926661722296:android:677759491325b054bcb44d",
+        "android_client_info": {
+          "package_name": "com.example.entregador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6N1YVpqhD8mgDAmDBdmzEdKH9yE9OonU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
