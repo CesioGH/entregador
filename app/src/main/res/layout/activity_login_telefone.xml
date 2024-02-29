@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/telefoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefone ((xx)xxxxx-xxxx)"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/receberSmsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receber SMS"/>
+
+    <EditText
+        android:id="@+id/codigoSmsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código do SMS"
+        android:inputType="number"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/verificarCodigoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar Código"
+        android:enabled="false"/>
+
+</LinearLayout>
