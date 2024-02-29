@@ -1,5 +1,6 @@
 package com.example.entregador
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,10 +43,10 @@ class LoginTelefoneActivity : AppCompatActivity() {
 
     private fun enviarCodigo(telefone: String) {
         val options = PhoneAuthOptions.newBuilder(FirebaseAuth.getInstance())
-            .setPhoneNumber(telefone)       // Número de telefone a ser verificado
-            .setTimeout(60L, TimeUnit.SECONDS) // Timeout e unidade para o código ser enviado
-            .setActivity(this)                   // Activity (para callback binding)
-            .setCallbacks(callbacks)            // OnVerificationStateChangedCallbacks
+            .setPhoneNumber(telefone)
+            .setTimeout(60L, TimeUnit.SECONDS)
+            .setActivity(this)
+            .setCallbacks(callbacks)
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
@@ -78,13 +79,15 @@ class LoginTelefoneActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success
                     Toast.makeText(applicationContext, "Login bem-sucedido.", Toast.LENGTH_LONG).show()
-                    // Você pode direcionar o usuário para a próxima tela aqui
+                    // Redirecionar para MainActivity
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // Encerra esta atividade para evitar retornar a ela ao pressionar voltar
                 } else {
-                    // Sign in failed
                     Toast.makeText(applicationContext, "Falha no login: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
             }
     }
+
 }

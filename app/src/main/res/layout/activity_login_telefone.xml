@@ -16,7 +16,8 @@
         android:id="@+id/receberSmsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Receber SMS"/>
+        android:backgroundTint="#DD0A0A"
+        android:text="Receber SMS" />
 
     <EditText
         android:id="@+id/codigoSmsEditText"
